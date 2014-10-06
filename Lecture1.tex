@@ -1,0 +1,71 @@
+\chapter{Vector Algebra}
+
+\section{Linearly independent vectors}
+
+Given a set of $m$ vectors, $\bm{a}_1$, $\bm{a}_2$, ...,$\bm{a}_3$, a linear
+combination of these vectors is an expression:
+$$
+	c_1\bm{a}_1 + c_2\bm{a}_2 + ... + c_m\bm{a}_m
+$$
+Where $c_1$, $c_2$, ..., $c_m$ are scalars.
+
+\paragraph{Defintion: Linearly independent} vectors satisfy the equation:
+$$
+	c_1\bm{a}_1 + c_2\bm{a}_2 + ... + c_m\bm{a}_m = \bm{0}
+$$
+if and only if $c_1$, $c_2$, ..., $c_m = 0$.
+	
+If the above equation holds when the scalars are not 0, we say that the set of
+vectors are \emph{linearly dependent}. If they are linearly dependent, this
+means that at least one of them is a scalar multiple of the others.
+\begin{proof} 
+If $c_1 \neq 0$:
+$$
+	\bm{a}_1 = \frac{1}{c_1}(c_2\bm{a}_2 + ... + c_m\bm{a}_m)
+$$
+\end{proof}
+
+\section{Linear vector space}
+
+A set of $V$ elements $\bm{a}$, $\bm{b}$, ..., is called a linear vector space
+$V$. It's elements are all vectors if there are two operations called
+\emph{addition} and \emph{scalar multiplication}, and satisfy the following
+criteria:
+
+\begin{itemize}
+	\item $\bm{a} + \bm{b} \in V$ for all $\bm{a}, \bm{b} \in V$ (closed under
+	addition)
+	\item $\lambda\bm{a} \in V$ for all $\lambda \in \mathbb{R}/\mathbb{C}$ and
+	$\bm{a} \in V$ (closed under scalar multiplication)
+	\item $\bm{a} + \bm{b} = \bm{b} + \bm{a}$ for all $\bm{a}, \bm{b} \in V$ 
+	(commuitive)
+	\item $(\bm{a} + \bm{b}) + \bm{c} = \bm{a} + (\bm{b} + \bm{c})$ for all 
+	$\bm{a}, \bm{b}, \bm{c} \in V$ (associative)
+	\item $(\mu + \lambda)\bm{a} = \mu\bm{a} + \lambda\bm{a}$ for all $\bm{a}
+	\in V$ and $\mu, \lambda \in \mathbb{R}/\mathbb{C}$ (distributitive)
+	\item There exists a $\bm{0} \in V$ such that $\bm{0} + \bm{a} = \bm{a}$ for
+	all $\bm{a} \in V$
+	\item For all $\bm{a} in V$ there exists $-\bm{a}$ such that $\bm{a} + (-
+	\bm{a}) = \bm{0}$
+\end{itemize}
+
+\subsection{Dimension}
+The maximum number of linearly independent vectors in $V$ is called the
+dimension of $V$ (dim$V$).
+
+\section{Basis}
+A basis is a set of linearly independent vectors that can be taken in scalar
+multiples to span the whole of the vector space (you can make any vector in the
+space with this set). The requirements are:
+\begin{itemize}
+	\item The vectors are linearly independent
+	\item dim(Basis) = dim($V$)
+\end{itemize}
+One example of this is the \emph{standard basis} of $\mathbb{R}^3$:
+$$
+	\hat{i} = \begin{pmatrix}1\\0\\0\end{pmatrix}
+	\hat{j} = \begin{pmatrix}0\\1\\0\end{pmatrix}
+	\hat{k} = \begin{pmatrix}0\\0\\1\end{pmatrix}
+$$
+
+
