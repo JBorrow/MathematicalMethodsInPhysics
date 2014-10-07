@@ -1,0 +1,123 @@
+\section{Orthonormal Vectors}
+A set of vectors are called orthonormal if they are all of unit length and
+mutually perpendicular, i.e.:
+$$
+	\bm{a}\cdot\bm{b} = 0 \; \forall \; \bm{a}, \bm{b} \in V
+$$
+
+\section{Inner Products}
+Consider a vector space, $V$. The inner product of two vectors $\bm{a}$,
+$\bm{b} \in V$, is denoted by $(\bm{a}, \bm{b})$.
+
+It is a scalar function which satisfies some properties:
+\begin{itemize}
+	\item $(\bm{a}, \bm{b}) = {(\bm{b}, \bm{a})}^*$for all $\bm{a}, \bm{b} \in V
+	$ (symmetry/commutitive)
+	\item $(\bm{a}, \lambda\bm{b} + \mu\bm{c}) = 
+	\lambda(\bm{a}, \bm{b}) + \mu(\bm{a}, \bm{c})$ for all $\bm{a}, \bm{b},
+	\bm{c} \in V$ and $\mu, \lambda \in \mathbb{R}/\mathbb{C}$. (distributive)
+\end{itemize}
+Two vectors in a general vector space are said to be orthogonal if $(\bm{a},
+\bm{b}) = 0$.
+
+\subsection{Dot product}
+The dot product is the `standard' inner product that we use on $\mathbb{R}^n$.
+It has the value:
+$$
+	\bm{a}\cdot\bm{b} = |\bm{a}||\bm{b}|\cos\theta
+$$
+We say that $|\bm{b}|\cos\theta$ is the projection of $\bm{b}$ onto $\bm{a}$.
+The value of the dot product can also be found using:
+$$
+	\bm{a}\cdot\bm{b} = a_1 b_1 + a_2 b_2 + \hdots + a_n b_n
+$$
+
+\subsubsection{Complex inner product}
+Here we use a generalisation of the dot product:
+$$
+	<\bm{a}, \bm{b}> = \bm{a}^\dagger\cdot\bm{b} = a_x^*b_x + a_y^*b_x + \hdots
+$$
+Where the $\dagger$ represents the complex-conjugate transpose of the original
+vector.
+
+\subsection{Vector product}
+The vector product, rather than returning a scalar, returns a vector. This
+vector is perpendicular to both `input' vectors.
+$$
+	|\bm{a} \times \bm{b}| = |\bm{a}||\bm{b}|\sin\theta
+$$
+If both vectors are in the same direction (i.e. $\theta=0$) then the vector
+product returns 0. To calculate the vector returned:
+$$
+	\begin{pmatrix}
+	a_x\\
+	a_y\\
+	a_z\\
+	\end{pmatrix}
+	\times
+	\begin{pmatrix}
+	b_x\\
+	b_y\\
+	b_z\\
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+	a_y b_z - a_z b_y\\
+	a_z b_x - a_x b_z\\
+	a_x b_y - a_y b_x\\
+	\end{pmatrix}
+$$
+
+\subsubsection{Triple product}
+$$
+	[\bm{a},\bm{b},\bm{c}] = \bm{a} \cdot (\bm{b} \times \bm{c})
+$$
+
+\section{Equation of a line}
+Imagine you have a point in space, which you know is on the line ($\bm{a}$).
+Then, imagine you have a vector that points in the direction of your line
+($\bm{b}$). You can then find any point on the line ($\bm{r}$):
+$$
+	\bm{r} = \bm{a} + \lambda\bm{b}
+$$
+However, if you know two points ($\bm{c}$, $\bm{d}$), you can work out the
+direction vector:
+$$
+	\bm{r} = (\bm{c} - \bm{d})\lambda + \bm{c}
+$$
+It is also possible to describe a line using a vector product. This is because
+you know that everything in the line is in the same direction as the direction
+vector $\bm{b}$:
+$$
+	(\bm{r} - \bm{a})\times\bm{b} = 0
+$$
+
+\section{Equation of a plane}
+A plane goes through a point $\bm{a}$ with a normal vector $\hat{n}$. Any point
+in the plane can then be found by using a scalar product (a vector `in' the
+plane dotted with the normal is always 0):
+$$
+	(\bm{r} - \bm{a})\cdot\hat{\bm{n}} = 0
+$$
+We can re-write this:
+$$
+	xn_x + yn_y + zn_z = \bm{a}\cdot\hat{\bm{n}} = d
+$$
+Another way of getting a plane is to specify three points lying in the plane,
+$\bm{a}$, $\bm{b}$, $\bm{c}$, and specify vectors that lie in the plane using
+these:
+$$
+	\hat{\bm{n}} = (\bm{b} - \bm{a}) \times (\bm{b} - \bm{c})
+$$
+
+\section{Equation of a sphere}
+If we know the centre of the sphere, $\bm{c}$, and the radius, $a$, we know that
+the distance to any point on the surface ($\bm{r}$) from the centre is $a$:
+$$
+	|\bm{r} - \bm{c}| = a^2
+$$
+This expands out to the familar equation:
+$$
+	{(x-c_x)}^2 + {(y-c_y)}^2 + {(z-c_z)}^2 = a^2
+$$
+
