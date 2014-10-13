@@ -1,0 +1,62 @@
+\section{Linear operators}
+An operator is an object that associates one vector space with another:
+$$
+	\bm{y} = A \bm{x}
+$$
+An operator is said to be linear if:
+\begin{itemize}
+	\item $A(\bm{a} + \bm{b}) = A\bm{a} + b\bm{b}$
+	\item $A(\lambda\bm{a}) = \lambda (A\bm{a})$
+\end{itemize}
+We can write operators as matricies.
+
+\section{Matricies}
+A matrix is an array of elements written by enclosing them in parentheses. A
+vector is also a matrix, with only one column or row. By convention we write
+$\bm{x}$ as a column vector.
+
+\subsection{Matrix addition}
+For some element $A_{ij}$:
+$$
+	S = A + B \; \rightarrow \; S_{ij} = A_{ij} + B_{ij}
+$$
+
+\subsection{Multiplication by scalar}
+$$
+	S = \lambda A \; \rightarrow \; S_{ij} = \lambda A_{ij}
+$$
+
+\subsection{Matrix multiplication}
+$$
+	P = AB \; \rightarrow \; P_{ij} = \Sigma_n A_{in}B_{nj}
+$$
+Where the matrices have dimensions $(x \times n)$ and $(n \times y)$ for
+matricies $A$ and $B$ respectively.
+
+Matrix multiplication is \emph{not} commutitive - i.e.:
+$$
+	AB \neq BA
+$$
+
+\subsection{Transpose}
+If a matrix is transposed, it returns the columns and rows switched:
+$$
+	A_{ij}^{T} = A_{ji}
+$$
+\subsubsection{The Hermition conjugate}
+This is the same as transpose, but also takes the complex conjugate:
+$$
+	A_{ij}^{\dagger} = A^*_{ji}
+$$
+
+\subsection{Trace}
+The trace of a matrix is the sum of the diagonal elements:
+$$
+	Tr(A) = \Sigma_n A_{nn}
+$$
+The trace of a multiple product of matricies is invariant under a cyclic
+permutation of matricies:
+$$
+	Tr(ABC) = Tr(ACB) = Tr(BCA) = \hdots
+$$
+
